@@ -1,8 +1,8 @@
 function HomePageComponent() {
     return (
         <>
-            <Navbar />
-            <h1>homepage</h1>
+            <h1>Home Page</h1>
+            <p>Benvenuto nella nostra home page</p>
         </>
     )
 }

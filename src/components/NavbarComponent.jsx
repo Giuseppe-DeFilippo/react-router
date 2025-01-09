@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -17,13 +18,13 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Homepage</a>
+                            <NavLink className="nav-link" to={"/app"}>Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">chi siamo</a>
+                            <NavLink className="nav-link" to={"/chi-siamo"}>Chi siamo</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">lista post</a>
+                            <NavLink classname="nav-link" to={"/post"}>Post</NavLink>
                         </li>
                     </ul>
                 </div>
