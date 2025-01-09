@@ -3,7 +3,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div className="container-fluid">
-                z<NavLink className="navbar-brand" to={"/"}>React Router</NavLink>
+                <NavLink className="navbar-brand" to={"/"}>React Router</NavLink>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -24,7 +24,7 @@ function Navbar() {
                             <NavLink className="nav-link" to={"/chi-siamo"}>Chi siamo</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink classname="nav-link" to={"/post"}>Post</NavLink>
+                            <NavLink className="nav-link" to={"/post"}>Post</NavLink>
                         </li>
                     </ul>
                 </div>
