@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <header><Navbar /></header>
-      <main></main>
+      <main><h2>asdhasduis</h2></main>
       <footer></footer>
     </>
   )

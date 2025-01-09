@@ -9,7 +9,7 @@ import ChiSiamoComponent from './components/ChiSiamoComponent'
 import PostComponent from './components/PostComponent'
 const router = createBrowserRouter([
   {
-    path: '/app',
+    path: '/',
     element: <App />,
   },
   {
