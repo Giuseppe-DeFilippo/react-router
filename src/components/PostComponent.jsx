@@ -1,10 +1,12 @@
-import CardComponent from "./CardComponents";
+import CardListComponent from "./CardListComponents";
+
 
 function PostComponent() {
     return (
         <div>
-            <CardComponent />
+            <CardListComponent />
         </div>
     )
 }
+
 export default PostComponent;   

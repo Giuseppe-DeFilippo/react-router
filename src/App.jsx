@@ -8,11 +8,16 @@ import PostComponent from './components/PostComponent'
 import Navbar from './components/NavbarComponent'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DefaultLayoutComponent from './components/DefaultLayoutComponent'
+import CardComponent from './components/CardListComponents'
+import CardListComponent from './components/CardListComponents'
+
 
 function App() {
 
 
+
   return (
+
     <>
       <BrowserRouter>
         <Routes>
