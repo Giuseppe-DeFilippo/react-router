@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary ">
             <div className="container-fluid">
                 <NavLink className="navbar-brand" to={"/"}>React Router</NavLink>
                 <button
