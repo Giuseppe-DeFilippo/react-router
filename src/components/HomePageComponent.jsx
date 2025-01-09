@@ -1,3 +1,5 @@
+import Navbar from "./NavbarComponent";
+
 function HomePageComponent() {
     return (
         <>

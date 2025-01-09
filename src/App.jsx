@@ -7,6 +7,7 @@ import ChiSiamoComponent from './components/ChiSiamoComponent'
 import PostComponent from './components/PostComponent'
 import Navbar from './components/NavbarComponent'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import DefaultLayoutComponent from './components/DefaultLayoutComponent'
 
 function App() {
   // const [articoli, setArticoli] = useState([]);
@@ -49,12 +50,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/home" element={<HomePageComponent />} />
-          <Route path="/chi-siamo" element={<ChiSiamoComponent />} />
-          <Route path="/post" element={<PostComponent />} />
+          <Route element={<DefaultLayoutComponent />}>
+            <Route index element={<HomePageComponent />} />
+            <Route path="/chi-siamo" element={<ChiSiamoComponent />} />
+            <Route path="/post" element={<PostComponent />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

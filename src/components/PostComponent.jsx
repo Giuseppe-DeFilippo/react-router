@@ -1,7 +1,9 @@
+import CardComponent from "./CardComponents";
+
 function PostComponent() {
     return (
         <div>
-            <h1>Post Component</h1>
+            <CardComponent />
         </div>
     )
 }
