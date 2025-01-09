@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-function FormComponent({ articoli, setArticoli }) {
+
+
+function FormComponents({ articoli, setArticoli }) {
     const [formData, setFormData] = useState({
         titolo: "",
         immagine: "",
@@ -159,4 +161,5 @@ function FormComponent({ articoli, setArticoli }) {
     );
 
 }
-export default FormComponent;
+export default FormComponents;
+

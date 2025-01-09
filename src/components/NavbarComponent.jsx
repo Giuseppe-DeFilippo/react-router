@@ -26,6 +26,9 @@ function Navbar() {
                         <li className="nav-item">
                             <NavLink className="nav-link" to={"/post"}>Post</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to={"/crea-post"}>Crea Post</NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>

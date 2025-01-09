@@ -8,6 +8,7 @@ function DefaultLayoutComponent() {
 
             <main>
                 <Outlet />
+
             </main>
 
 
