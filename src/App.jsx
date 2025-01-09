@@ -6,7 +6,7 @@ import HomePageComponent from './components/HomePageComponent'
 import ChiSiamoComponent from './components/ChiSiamoComponent'
 import PostComponent from './components/PostComponent'
 import Navbar from './components/NavbarComponent'
-import { Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   // const [articoli, setArticoli] = useState([]);
@@ -48,14 +48,15 @@ function App() {
 
   return (
     <>
-
-      <Navbar />
-      <routes>
-        <Route path="/" element={<App />} />
-        <Route path="/home" element={<HomePageComponent />} />
-        <Route path="/chi-siamo" element={<ChiSiamoComponent />} />
-        <Route path="/post" element={<PostComponent />} />
-      </routes>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/home" element={<HomePageComponent />} />
+          <Route path="/chi-siamo" element={<ChiSiamoComponent />} />
+          <Route path="/post" element={<PostComponent />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
