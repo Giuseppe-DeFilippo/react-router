@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function CardComponent({ articolo, onRemove }) {
     const { titolo, immagine, contenuto, categoria, tags, stato, email } = articolo;
@@ -13,6 +14,7 @@ function CardComponent({ articolo, onRemove }) {
                     alt={`Immagine di ${titolo}`}
                 />
             )}
+
             <div className="card-body">
                 <h5 className="card-title">{titolo}</h5>
                 <p className="card-text">{contenuto}</p>
@@ -54,17 +56,21 @@ export default function CardListComponent() {
         const nuoviArticoli = articoli.filter((_, i) => i !== index);
         setArticoli(nuoviArticoli);
     };
+
+
     return (
         <div>
             <h1>Lista Articoli</h1>
             <div className="card-list">
                 {articoli.length > 0 ? (
                     articoli.map((articolo, index) => (
-                        <CardComponent
-                            key={index}
-                            articolo={articolo}
-                            onRemove={() => handleRemove(index)}
-                        />
+                        <Link to={`/post/${articolo.id}`} key={articolo.id}>
+                            <CardComponent
+                                articolo={articolo}
+                                onRemove={() => handleRemove(index)}
+
+                            />
+                        </Link>
                     ))
                 ) : (
                     <p>Nessun articolo disponibile.</p>

@@ -5,6 +5,7 @@ import PostComponent from './components/PostComponent'
 import { BrowserRouter, Routes, Route, Form } from 'react-router-dom'
 import DefaultLayoutComponent from './components/DefaultLayoutComponent'
 import FormComponents from './components/FormComponents'
+import CardListComponent from './components/CardListComponents'
 
 
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/chi-siamo" element={<ChiSiamoComponent />} />
             <Route path="/post" element={<PostComponent />} />
             <Route path="/crea-post" element={<FormComponents />} />
+            <Route path="/post/:postID" element={<CardListComponent />} />
           </Route>
         </Routes>
       </BrowserRouter>
