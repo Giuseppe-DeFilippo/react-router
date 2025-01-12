@@ -63,17 +63,6 @@ export default function CardListComponent() {
             })
 
     }
-    // const listaArticoli = ({ articoli }) => {
-    //     const [selectedCard, setSelectedCard] = useState(null)
-    // }
-
-    // const handleCardClick = (id) => {
-    //     setSelectedCard(id)
-    // }
-
-    // const handleClosedCard = () => {
-    //     setSelectedCard(null)
-    // }
 
     return (
         <div>
