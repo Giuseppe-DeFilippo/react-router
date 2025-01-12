@@ -56,7 +56,13 @@ export default function CardListComponent() {
         const nuoviArticoli = articoli.filter((_, i) => i !== index);
         setArticoli(nuoviArticoli);
     };
+    const handleDelete = (id) => {
+        axios.delete(`http://localhost:3000/api/post/${id}`)
+            .then((response) => {
+                setArticoli(articoli.filter((articolo) => articolo._id !== id));
+            })
 
+    }
 
     return (
         <div>
@@ -67,8 +73,8 @@ export default function CardListComponent() {
                         <Link to={`/post/${articolo.id}`} key={articolo.id}>
                             <CardComponent
                                 articolo={articolo}
-                                onRemove={() => handleRemove(index)}
-
+                                onRemove={() => { handleRemove(index); handleDelete(articolo.id) }}
+                            // onClick={() => handleDelete(articolo.id)}
                             />
                         </Link>
                     ))
