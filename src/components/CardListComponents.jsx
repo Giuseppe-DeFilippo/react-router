@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function CardComponent({ articolo, onRemove }) {
+function CardComponent({ articolo, onRemove, onClick }) {
     const { titolo, immagine, contenuto, categoria, tags, stato, email } = articolo;
 
     return (
@@ -58,11 +58,22 @@ export default function CardListComponent() {
     };
     const handleDelete = (id) => {
         axios.delete(`http://localhost:3000/api/post/${id}`)
-            .then((response) => {
+            .then(() => {
                 setArticoli(articoli.filter((articolo) => articolo._id !== id));
             })
 
     }
+    // const listaArticoli = ({ articoli }) => {
+    //     const [selectedCard, setSelectedCard] = useState(null)
+    // }
+
+    // const handleCardClick = (id) => {
+    //     setSelectedCard(id)
+    // }
+
+    // const handleClosedCard = () => {
+    //     setSelectedCard(null)
+    // }
 
     return (
         <div>
@@ -73,8 +84,9 @@ export default function CardListComponent() {
                         <Link to={`/post/${articolo.id}`} key={articolo.id}>
                             <CardComponent
                                 articolo={articolo}
-                                onRemove={() => { handleRemove(index); handleDelete(articolo.id) }}
-                            // onClick={() => handleDelete(articolo.id)}
+                                onRemove={() => {
+                                    handleRemove(index); handleDelete(articolo.id)
+                                }}
                             />
                         </Link>
                     ))
@@ -82,7 +94,9 @@ export default function CardListComponent() {
                     <p>Nessun articolo disponibile.</p>
                 )}
             </div>
+
         </div>
+
     );
 }
 

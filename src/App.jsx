@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Form } from 'react-router-dom'
 import DefaultLayoutComponent from './components/DefaultLayoutComponent'
 import FormComponents from './components/FormComponents'
 import CardListComponent from './components/CardListComponents'
-
+import SingleCardComponent from './components/SingleCardComponent'
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
             <Route path="/chi-siamo" element={<ChiSiamoComponent />} />
             <Route path="/post" element={<PostComponent />} />
             <Route path="/crea-post" element={<FormComponents />} />
-            <Route path="/post/:postID" element={<CardListComponent />} />
+            <Route path="/post/:postID" element={<SingleCardComponent />} />
           </Route>
         </Routes>
       </BrowserRouter>
